@@ -1,0 +1,52 @@
+/* Slide Animation Classes */
+.slide-in-center {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-out-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slide-out-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.slide-in-right {
+  animation: slideInFromRight 0.5s ease-in-out forwards;
+}
+
+.slide-in-left {
+  animation: slideInFromLeft 0.5s ease-in-out forwards;
+}
+
+/* Keyframe Animations */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Ensure smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,272 @@
+.hero {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 68vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  transition: background-image 0.5s ease-in-out;
+  margin-top: 110px;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 20, 30, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 40px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 700px;
+  z-index: 1;
+  margin-left: 50px;
+}
+
+.headline,
+.headl {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+
+.headl {
+  margin-bottom: 16px;
+}
+
+.subheading {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #f2f2f2;
+  margin-top: 10px;
+}
+
+.cta-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  position: relative;
+  padding: 14px 28px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  overflow: hidden;
+  z-index: 1;
+  transition: color 0.3s ease, border 0.3s ease;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 0%;
+  background-color: #332258ec;
+  z-index: -1;
+  transition: width 0.4s ease, height 0.4s ease;
+  border-radius: inherit;
+}
+
+/* Hover effect: background expands from top-left corner */
+.btn:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+/* PRIMARY button */
+.btn.primary {
+  background-color: #E87722;
+  color: white;
+}
+
+.btn.primary:hover {
+  color: white;
+}
+
+/* SECONDARY button */
+.btn.secondary {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.btn.secondary:hover {
+  color: white;
+  border-color: #125875;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.arrow:hover {
+  background: #E87722;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow.left {
+  left: 20px;
+}
+
+.arrow.right {
+  right: 20px;
+}
+
+/* Image Indicators */
+.image-indicators {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 2;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator:hover,
+.indicator.active {
+  background: #E87722;
+  transform: scale(1.2);
+}
+
+/* Marquee */
+.marquee-container {
+  overflow: hidden;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+.marquee-wrapper {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll-marquee 10s linear infinite;
+}
+
+.marquee-content {
+  padding-right: 100px;
+}
+
+/* Marquee Animation */
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: 78vh;
+  }
+
+  .hero-content {
+    margin-left: 0;
+  }
+
+  .headline,
+  .headl {
+    font-size: 36px;
+  }
+
+  .subheading,
+  .description {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+/* adding marquee for the mobie and non-desktop view */
+/* By default, hide on desktop */
+.marquee-container {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .marquee-container {
+    display: block;
+    width: 100%;
+    position: fixed; /* Make it stay below fixed navbar */
+    top: 60px; /* Adjust according to your navbar height */
+    background-color: #E87722;
+    padding: 6px 0;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: white;
+    z-index: 9999;
+    text-align: center;
+    border-bottom: 1px solid #f0c090;
+  }
+
+  .mobile-marquee {
+    white-space: nowrap;
+  }
+
+  /* Push rest of the content down so it doesn't overlap */
+  .hero {
+    margin-top: 100px; /* navbar height (60px) + marquee height (~40px) */
+  }
+}
