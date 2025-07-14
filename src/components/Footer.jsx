@@ -173,14 +173,14 @@ const Footer = () => {
                 Electrical Engineering
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="#"
                 className="hover:text-[#E87722] transition-colors duration-200"
               >
                 Humanities & Basic Science
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
 

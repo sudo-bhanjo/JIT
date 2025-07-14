@@ -164,13 +164,13 @@ const Navbar = () => {
                   >
                     Electrical Engineering
                   </Link>
-                  <Link
+                  {/* <Link
                     to="/ece"
                     onClick={() => setDeptOpen(false)}
                     className="block px-4 py-2 text-sm text-gray-700 hover:text-[#E87722] font-bold"
                   >
                     Electronics and Communication Engineering
-                  </Link>
+                  </Link> */}
                   <Link
                     to="/civil"
                     onClick={() => setDeptOpen(false)}
@@ -430,7 +430,7 @@ const Navbar = () => {
                   Electrical Engineering
                 </Link>
 
-                <Link
+                {/* <Link
                   to="/ece"
                   onClick={() => {
                     setDeptOpenMobile(false);
@@ -439,7 +439,7 @@ const Navbar = () => {
                   className="block px-3 py-2 text-gray-600 hover:text-[#E87722] text-sm"
                 >
                   Electronics and Communication Engineering
-                </Link>
+                </Link> */}
 
                 <Link
                   to="/civil"
