@@ -161,7 +161,7 @@ const About = () => {
     const teachersElement = document.getElementById("teachers-count");
     animateCount(studentsElement, 0, 1500, 5000);
     animateCount(placedElement, 0, 450, 5000);
-    animateCount(teachersElement, 0, 45, 5000);
+    animateCount(teachersElement, 0, 30, 5000);
   }, []);
 
   return (
@@ -187,8 +187,7 @@ const About = () => {
 
             <p className="text-teal-700 mb-4 text-sm sm:text-base">
               <strong>Jalpaiguri Institute of Technology (JIT)</strong> is a
-              premier{" "}
-              <strong>polytechnic engineering college in West Bengal</strong>,
+              premier <strong>polytechnic college in West Bengal</strong>,
               dedicated to empowering students with hands-on technical education
               and industry-relevant skills. Located in the heart of{" "}
               <strong>Jalpaiguri</strong>, our campus is a hub of innovation,

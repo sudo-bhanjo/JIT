@@ -154,7 +154,7 @@ const Footer = () => {
                 href="#"
                 className="hover:text-[#E87722] transition-colors duration-200"
               >
-                Computer Sc. & Technology
+                Computer Science & Engineering
               </a>
             </li>
             <li>
@@ -246,7 +246,7 @@ const Footer = () => {
                 <Mail className="text-white w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <span className="pt-1 break-all">
-                jalpaiguripolytechnic@gmail.com
+                jalpaiguri.institute.technology@gmail.com
               </span>
             </li>
             {/* Address */}

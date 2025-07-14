@@ -100,7 +100,7 @@ const CoursesSection = () => {
                 navigate("/cse");
               }}
             >
-              Computer Science and Technology
+              Computer Science and Engineering
             </button>
             <p className="text-[#1A202C] m-2 text-center">
               Gain in-demand IT skills in programming, networking & software
@@ -177,7 +177,7 @@ const CoursesSection = () => {
           </div>
         </AnimatedCard>
 
-        <div className="col-span-full flex justify-center">
+        {/* <div className="col-span-full flex justify-center">
           <AnimatedCard direction="right">
             <div className="bg-white p-4 flex flex-col items-center">
               <img
@@ -196,7 +196,7 @@ const CoursesSection = () => {
               </p>
             </div>
           </AnimatedCard>
-        </div>
+        </div> */}
       </div>
     </div>
   );

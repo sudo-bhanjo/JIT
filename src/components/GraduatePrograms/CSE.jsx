@@ -19,7 +19,7 @@ const CSE = () => {
           </Link>
 
           <h1 className="text-3xl md:text-4xl font-extrabold text-[#3c254a] mb-6 text-center">
-            Diploma in Computer Science & Technology
+            Diploma in Computer Science & Engineering
           </h1>
           <div className="text-center max-w-6xl mx-auto">
             <p className="text-gray-700 text-lg leading-relaxed">
