@@ -5,6 +5,7 @@ import {
   NotebookTabsIcon,
   PhoneIcon,
 } from "lucide-react";
+import Footer from "../Footer";
 import React, { useEffect } from "react";
 
 const ContactUs = () => {
@@ -227,6 +228,7 @@ const ContactUs = () => {
           </div>
         </form>
       </div>
+       <Footer />
     </>
   );
 };
