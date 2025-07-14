@@ -57,11 +57,11 @@ const PlacementSection = () => {
 
   const stats = [
     { label: "Placement Offers", value: 450 },
-    { label: "Highest Package", value: 700000, isCurrency: true },
+    { label: "Highest Package", value: 300000, isCurrency: true },
     { label: "Recruiters", value: 20 },
-    { label: "50 LPA by 9+ Companies", value: 50 },
-    { label: "25–30 LPA by 200+ Companies", value: 30 },
-    { label: "10 LPA by 500+ Companies", value: 10 },
+    { label: "5 LPA by 9+ Companies", value: 5 },
+    { label: "2.5–3 LPA by 200+ Companies", value: 3 },
+    { label: "1 LPA by 500+ Companies", value: 1 },
   ];
 
   return (

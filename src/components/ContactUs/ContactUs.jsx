@@ -62,14 +62,14 @@ const ContactUs = () => {
               <p className="font-semibold text-base sm:text-lg">Email ID</p>
             </div>
             <p className="text-gray-700 mt-2 pl-[35px] text-sm sm:text-base">
-              jalpaiguripolytechnic@gmail.com
+              jalpaiguri.institute.technology@gmail.com
             </p>
           </div>
 
           {/* Google Map Embed */}
           <div className="rounded-xl overflow-hidden shadow-md">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.278289655287!2d88.75872391485649!3d26.49148868330813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e4d0611a5e946b%3A0xf77c4414f2b65a06!2sRaninagar%20BSF%20Camp!5e0!3m2!1sen!2sin!4v1683875015212!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3648.278289655287!2d8.75872391485649!3d26.49148868330813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e4d0611a5e946b%3A0xf77c4414f2b65a06!2sRaninagar%20BSF%20Camp!5e0!3m2!1sen!2sin!4v1683875015212!5m2!1sen!2sin"
               width="100%"
               height="300"
               allowFullScreen=""
@@ -94,7 +94,7 @@ const ContactUs = () => {
                     To know more, please mail us at:
                   </span>
                 </div>
-                <p className="pl-[35px]">jalpaiguripolytechnic@gmail.com</p>
+                <p className="pl-[35px]">jalpaiguri.institute.technology@gmail.com</p>
               </div>
               <div>
                 <div className="flex items-center gap-2">
@@ -120,7 +120,7 @@ const ContactUs = () => {
                     For placement purpose please mail us at:
                   </span>
                 </div>
-                <p className="pl-[35px]">polytechnic.jalpaiguri@gmail.com</p>
+                <p className="pl-[35px]">jalpaiguri.institute.technology@gmail.com</p>
               </div>
               <div>
                 <div className="flex items-center gap-2">
@@ -204,10 +204,10 @@ const ContactUs = () => {
             <select className="border border-gray-300 outline-0 rounded-lg px-4 py-3 w-full text-gray-500">
               <option>Select Courses</option>
               <option>Civil Engineering</option>
-              <option>Computer Sc. & Technology</option>
+              <option>Computer Sc. & Engineering</option>
               <option>Mechanical Engineering</option>
               <option>Electrical Engineering</option>
-              <option>General Science</option>
+              {/* <option>General Science</option> */}
             </select>
           </div>
 
