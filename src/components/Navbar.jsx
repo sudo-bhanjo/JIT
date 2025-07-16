@@ -11,6 +11,7 @@ const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isAcademicsOpenMobile, setIsAcademicsOpenMobile] = useState(false);
+  const [showWBSCTESubmenu, setShowWBSCTESubmenu] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleSearch = () => setIsSearchOpen(!isSearchOpen);
@@ -21,6 +22,7 @@ const Navbar = () => {
   const [isAboutOpenMobile, setIsAboutOpenMobile] = useState(false); // for mobile
   const [isDeptOpen, setDeptOpen] = useState(false); // for desktop
   const [isDeptOpenMobile, setDeptOpenMobile] = useState(false); // for mobile
+  const [showAICTESubmenu, setShowAICTESubmenu] = useState(false);
 
   const handleNavClick = (sectionId) => {
     if (location.pathname !== "/") {
@@ -114,25 +116,97 @@ const Navbar = () => {
                   >
                     Admission Process
                   </Link>
-                  <a
-                    href="/Documents/AICTE.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsAboutOpen(false)}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:text-[#E87722] font-bold"
-                  >
-                    AICTE Approval
-                  </a>
+                  <div className="relative">
+                    <button
+                      onClick={() => setShowAICTESubmenu(!showAICTESubmenu)}
+                      className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:text-[#E87722] font-bold"
+                    >
+                      AICTE Approval <ChevronDown className="w-4 h-4 ml-1" />
+                    </button>
 
-                  <a
-                    href="/Documents/WBSCTE.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => setIsAboutOpen(false)}
-                    className="block px-4 py-2 text-sm text-gray-700 hover:text-[#E87722] font-bold"
-                  >
-                    WBSCTE Approval
-                  </a>
+                    {showAICTESubmenu && (
+                      <div className="ml-4 mt-1 space-y-1">
+                        <a
+                          href="/Documents/AICTE 23-24.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setIsAboutOpen(false)}
+                          className="block px-3 py-1 text-gray-500 hover:text-[#E87722] text-sm"
+                        >
+                          Approval 2023-24
+                        </a>
+                        <a
+                          href="/Documents/AICTE 24-25.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setIsAboutOpen(false)}
+                          className="block px-3 py-1 text-gray-500 hover:text-[#E87722] text-sm"
+                        >
+                          Approval 2024-25
+                        </a>
+                        <a
+                          href="/Documents/AICTE 25-26.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setIsAboutOpen(false)}
+                          className="block px-3 py-1 text-gray-500 hover:text-[#E87722] text-sm"
+                        >
+                          Approval 2025-26
+                        </a>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="relative">
+                    <button
+                      onClick={() => setShowWBSCTESubmenu(!showWBSCTESubmenu)}
+                      className="flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:text-[#E87722] font-bold gap-1"
+                    >
+                      WBSCTE Approval
+                      <ChevronDown className="w-4 h-4" />
+                    </button>
+
+                    {showWBSCTESubmenu && (
+                      <div className="ml-4 mt-1 space-y-1">
+                        <a
+                          href="/Documents/WBSCTE 2023-24.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => {
+                            setIsAboutOpen(false);
+                            setShowWBSCTESubmenu(false);
+                          }}
+                          className="block px-4 py-1 text-sm text-gray-600 hover:text-[#E87722]"
+                        >
+                          Approval 2023-24
+                        </a>
+                        <a
+                          href="/Documents/WBSCTE 2024-25.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => {
+                            setIsAboutOpen(false);
+                            setShowWBSCTESubmenu(false);
+                          }}
+                          className="block px-4 py-1 text-sm text-gray-600 hover:text-[#E87722]"
+                        >
+                          Approval 2024-25
+                        </a>
+                        <a
+                          href="/Documents/WBSCTE 2025-26.pdf"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => {
+                            setIsAboutOpen(false);
+                            setShowWBSCTESubmenu(false);
+                          }}
+                          className="block px-4 py-1 text-sm text-gray-600 hover:text-[#E87722]"
+                        >
+                          Approval 2025-26
+                        </a>
+                      </div>
+                    )}
+                  </div>
                 </div>
               )}
             </div>
@@ -376,24 +450,115 @@ const Navbar = () => {
                 >
                   Admission Process
                 </Link>
-                <a
-                  href="/Documents/AICTE.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsAboutOpen(false)}
-                  className="block px-3 py-2 text-gray-600 hover:text-[#E87722] text-sm"
-                >
-                  AICTE Approval
-                </a>
-                <a
-                  href="/Documents/WBSCTE.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => setIsAboutOpen(false)}
-                  className="block px-3 py-2 text-gray-600 hover:text-[#E87722] text-sm"
-                >
-                  WBSCTE Approval
-                </a>
+                <div className="block">
+                  <button
+                    onClick={() => setShowAICTESubmenu(!showAICTESubmenu)}
+                    className="w-full text-left px-3 py-2 text-gray-600 hover:text-[#E87722] text-sm flex items-center justify-between"
+                  >
+                    AICTE Approval
+                    <ChevronDown
+                      className={`w-4 h-4 transform transition-transform duration-200 ${
+                        showAICTESubmenu ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {showAICTESubmenu && (
+                    <div className="pl-6 mt-1">
+                      <a
+                        href="/Documents/AICTE 23-24.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => {
+                          setShowAICTESubmenu(false);
+                          setIsMenuOpen(false);
+                        }}
+                        className="block px-3 py-2 text-gray-600 hover:text-[#E87722] text-sm"
+                      >
+                        Approval 2023–24
+                      </a>
+                      <a
+                        href="/Documents/AICTE 24-25.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => {
+                          setShowAICTESubmenu(false);
+                          setIsMenuOpen(false);
+                        }}
+                        className="block px-3 py-2 text-gray-600 hover:text-[#E87722] text-sm"
+                      >
+                        Approval 2024–25
+                      </a>
+                      <a
+                        href="/Documents/AICTE 25-26.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => {
+                          setShowAICTESubmenu(false);
+                          setIsMenuOpen(false);
+                        }}
+                        className="block px-3 py-2 text-gray-600 hover:text-[#E87722] text-sm"
+                      >
+                        Approval 2025–26
+                      </a>
+                    </div>
+                  )}
+                </div>
+
+                <div className="block">
+                  <button
+                    onClick={() => setShowWBSCTESubmenu(!showWBSCTESubmenu)}
+                    className="w-full text-left px-3 py-2 text-gray-600 hover:text-[#E87722] text-sm flex items-center justify-between"
+                  >
+                    WBSCTE Approval
+                    <ChevronDown
+                      className={`w-4 h-4 transform transition-transform duration-200 ${
+                        showWBSCTESubmenu ? "rotate-180" : ""
+                      }`}
+                    />
+                  </button>
+
+                  {showWBSCTESubmenu && (
+                    <div className="pl-6 mt-1">
+                      <a
+                        href="/Documents/WBSCTE 2023-24.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => {
+                          setShowWBSCTESubmenu(false);
+                          setIsMenuOpen(false); // assuming you're closing the full mobile menu
+                        }}
+                        className="block px-3 py-2 text-gray-600 hover:text-[#E87722] text-sm"
+                      >
+                        Approval 2023–24
+                      </a>
+                      <a
+                        href="/Documents/WBSCTE 2024-25.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => {
+                          setShowWBSCTESubmenu(false);
+                          setIsMenuOpen(false);
+                        }}
+                        className="block px-3 py-2 text-gray-600 hover:text-[#E87722] text-sm"
+                      >
+                        Approval 2024–25
+                      </a>
+                      <a
+                        href="/Documents/WBSCTE 2025-26.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => {
+                          setShowWBSCTESubmenu(false);
+                          setIsMenuOpen(false);
+                        }}
+                        className="block px-3 py-2 text-gray-600 hover:text-[#E87722] text-sm"
+                      >
+                        Approval 2025–26
+                      </a>
+                    </div>
+                  )}
+                </div>
               </div>
             )}
           </div>
