@@ -377,7 +377,7 @@ const Navbar = () => {
                   Admission Process
                 </Link>
                 <a
-                  href="/Documents/AICTE.pdf"
+                  href="/Documents/AICTE1.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsAboutOpen(false)}
@@ -386,7 +386,7 @@ const Navbar = () => {
                   AICTE Approval
                 </a>
                 <a
-                  href="/Documents/WBSCTE.pdf"
+                  href="/Documents/WBSCTE1.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsAboutOpen(false)}
