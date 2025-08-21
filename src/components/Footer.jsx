@@ -255,8 +255,8 @@ const Footer = () => {
                 <MapPin className="text-white w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <span className="pt-1">
-                Chewara Para, (Near Raninagar BSF Camp), Post – Patkata, P.S.
-                Kotwali, Dist – Jalpaiguri.
+                Chewara Para, (Near Raninagar BSF Camp), Post – Patkata, P.S
+                Kotwali, Dist – Jalpaiguri
               </span>
             </li>
           </ul>
