@@ -2,10 +2,10 @@ import React from "react";
 import Footer from "../Footer";
 import { Link } from "react-router-dom";
 import back from "./img_asset/back-button.jpg";
+import lab1 from "./img_asset/cse1.jpeg";
+import lab2 from "./img_asset/cse2.jpeg";
 
 const CSE = () => {
-  // const navigate = useNavigate();
-
   return (
     <>
       <div className="mt-30 px-6 md:px-20 py-10 bg-gradient-to-br from-purple-50 via-white to-purple-100 min-h-screen">
@@ -45,8 +45,7 @@ const CSE = () => {
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="group bg-white hover:bg-[#3c254a] transition duration-400 p-4 rounded-md shadow-sm border border-gray-200 flex items-center justify-center text-center
- select-none"
+                  className="group bg-white hover:bg-[#3c254a] transition duration-400 p-4 rounded-md shadow-sm border border-gray-200 flex items-center justify-center text-center select-none"
                 >
                   <p className="text-gray-700 group-hover:text-[#fff]">
                     {item}
@@ -106,6 +105,40 @@ const CSE = () => {
               </li>
             ))}
           </ul>
+
+          {/* === Explore CSE Labs Section === */}
+          <h2 className="text-2xl font-bold text-gray-800 mt-12 mb-6 text-center">
+  Explore Computer Science Labs
+</h2>
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+  {[
+    { 
+      img: lab1, 
+      title: "Programming Lab", 
+      desc: "Equipped with modern systems and tools for learning C, Java, Python, and software development best practices."
+    },
+    { 
+      img: lab2, 
+      title: "Network Lab", 
+      desc: "Dedicated to hands-on learning in computer networks, cybersecurity, and cloud computing."
+    },
+  ].map((lab, idx) => (
+    <div
+      key={idx}
+      className="rounded-xl overflow-hidden shadow-lg border border-purple-200 bg-gradient-to-br from-purple-50 via-white to-purple-100 hover:shadow-2xl transition-all duration-500"
+    >
+      <img
+        src={lab.img}
+        alt={lab.title}
+        className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+      />
+      <div className="p-5">
+        <h3 className="text-lg font-bold text-[#3c254a] mb-2">{lab.title}</h3>
+        <p className="text-gray-700 text-sm leading-relaxed">{lab.desc}</p>
+      </div>
+    </div>
+  ))}
+</div>
         </div>
       </div>
       <Footer />

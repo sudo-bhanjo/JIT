@@ -2,6 +2,15 @@ import React from "react";
 import Footer from "../Footer";
 import { Link } from "react-router-dom";
 import back from "./img_asset/back-button.jpg";
+import lab1 from "./img_asset/me (1).jpeg";
+import lab2 from "./img_asset/me (2).jpeg";
+import lab3 from "./img_asset/me (3).jpeg";
+import lab4 from "./img_asset/me (4).jpeg";
+import lab5 from "./img_asset/me (5).jpeg";
+import lab6 from "./img_asset/me (6).jpeg";
+import lab7 from "./img_asset/me (10).jpeg";
+import lab8 from "./img_asset/me (11).jpeg";
+import lab9 from "./img_asset/me (12).jpeg";
 
 const Mech = () => {
   return (
@@ -100,6 +109,38 @@ const Mech = () => {
               </li>
             ))}
           </ul>
+
+          <h2 className="text-2xl font-bold text-gray-800 mt-12 mb-6 text-center">
+  Explore Mechanical Engineering Labs
+</h2>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  {[
+    { img: lab1, title: "Shaper Machine", desc: "Used for shaping and finishing metal workpieces with precision." },
+    { img: lab2, title: "Centre Lathe Machine", desc: "For turning, facing, threading, and other machining operations." },
+    { img: lab3, title: "Slotting Machine", desc: "Specialized for cutting slots, grooves, and keyways." },
+    { img: lab4, title: "Drilling Machine", desc: "Used for drilling accurate holes in various materials." },
+    { img: lab5, title: "Power Hacksaw", desc: "For cutting metal bars and sections with minimal effort." },
+    { img: lab6, title: "Lathe Machine", desc: "Versatile machining tool for cylindrical workpieces." },
+    { img: lab7, title: "Bench Grinder", desc: "For sharpening tools and grinding metal surfaces." },
+    { img: lab8, title: "Hydraulic Trainer Kit", desc: "For understanding hydraulic circuits and fluid power systems." },
+    { img: lab9, title: "Workshop Machine", desc: "Used for practical training and manufacturing experiments." },
+  ].map((lab, idx) => (
+    <div
+      key={idx}
+      className="rounded-xl overflow-hidden shadow-lg border border-purple-200 bg-gradient-to-br from-purple-50 via-white to-purple-100 hover:shadow-2xl transition-all duration-500"
+    >
+      <img
+        src={lab.img}
+        alt={lab.title}
+        className="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+      />
+      <div className="p-5">
+        <h3 className="text-lg font-bold text-[#3c254a] mb-2">{lab.title}</h3>
+        <p className="text-gray-700 text-sm leading-relaxed">{lab.desc}</p>
+      </div>
+    </div>
+  ))}
+</div>
         </div>
       </div>
       <Footer />

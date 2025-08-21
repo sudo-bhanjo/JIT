@@ -35,6 +35,7 @@ import EEE from "./components/GraduatePrograms/EEE.jsx";
 import ECE from "./components/GraduatePrograms/ECE.jsx";
 import DownloadProspectus from "./components/Hero/DownloadProspectus.jsx";
 import AdmissionProcess from "./components/AdmissionProcess/AdmissionProcess.jsx";
+import Humanitics_general from "./components/GraduatePrograms/Humanitics_general.jsx";
 
 // main
 const App = () => {
@@ -103,6 +104,7 @@ const App = () => {
         <Route path="/mec" element={<Mec />} />
         <Route path="/civil" element={<Civil />} />
         <Route path="/ece" element={<ECE />} />
+        <Route path="/general" element={<Humanitics_general />} />
       </Routes>
       <GetInTouchButton />
       {/* <Footer /> */}

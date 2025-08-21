@@ -8,6 +8,7 @@ const Navbar = () => {
   const location = useLocation();
   const [isAcademicsOpen, setIsAcademicsOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [isAcademicsOpenMobile, setIsAcademicsOpenMobile] = useState(false);
@@ -259,6 +260,15 @@ const Navbar = () => {
                   >
                     Mechanical Engineering
                   </Link>
+
+                  <Link
+                    to="/general"
+                    onClick={() => setDeptOpen(false)}
+                    className="block px-4 py-2 text-sm text-gray-700 hover:text-[#E87722] font-bold"
+                  >
+                    Humanities & Basic Science
+                  </Link>
+
                 </div>
               )}
             </div>
@@ -316,6 +326,13 @@ const Navbar = () => {
               className="text-gray-700 hover:text-[#E87722] font-bold"
             >
               Contact
+            </Link>
+
+            <Link
+              to="/Faculty"
+              className="text-gray-700 hover:text-[#E87722] font-bold"
+            >
+              Faculty
             </Link>
           </div>
 
@@ -627,6 +644,20 @@ const Navbar = () => {
                 >
                   Mechanical Engineering
                 </Link>
+                
+                <Link
+                    to="/general"
+                    onClick={() => {
+                    setDeptOpenMobile(false);
+                    setIsMenuOpen(false);
+                  }}
+                    className="block px-3 py-2 text-gray-600 hover:text-[#E87722] text-sm"
+                  >
+                    Humanities & Basic Science
+                  </Link>
+                  
+                  
+
               </div>
             )}
           </div>
