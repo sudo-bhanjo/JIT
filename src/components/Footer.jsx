@@ -1,6 +1,10 @@
+
+import { useState } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 const Footer = () => {
+  const [showMore, setShowMore] = useState(false);
+
   return (
     <footer className="bg-[#3c254a] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -11,130 +15,73 @@ const Footer = () => {
           </p>
           <ul className="space-y-2 text-sm text-gray-300">
             <li>
-              <a
-                href="#"
-                className="hover:text-[#E87722] transition-colors duration-200"
-              >
+              <a href="#" className="hover:text-[#E87722] transition-colors duration-200">
                 About us
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="hover:text-[#E87722] transition-colors duration-200"
-              >
+              <a href="#" className="hover:text-[#E87722] transition-colors duration-200">
                 About Academics
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="hover:text-[#E87722] transition-colors duration-200"
-              >
+              <a href="#" className="hover:text-[#E87722] transition-colors duration-200">
                 Admission
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="hover:text-[#E87722] transition-colors duration-200"
-              >
+              <a href="#" className="hover:text-[#E87722] transition-colors duration-200">
                 Rules & Regulations
               </a>
             </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-[#E87722] transition-colors duration-200"
-              >
-                Exploration with Expression
-              </a>
-            </li>
-            <li className="hidden sm:block">
-              <a
-                href="#"
-                className="hover:text-[#E87722] transition-colors duration-200"
-              >
+
+            
+            <li className={`${showMore ? "block" : "hidden"} sm:block`}>
+              <a href="#" className="hover:text-[#E87722] transition-colors duration-200">
                 Student Grievances Cell
               </a>
             </li>
-            <li className="hidden sm:block">
-              <a
-                href="#"
-                className="hover:text-[#E87722] transition-colors duration-200"
-              >
+            <li className={`${showMore ? "block" : "hidden"} sm:block`}>
+              <a href="#" className="hover:text-[#E87722] transition-colors duration-200">
                 Mandatory Disclosure
               </a>
             </li>
-            <li className="hidden sm:block">
-              <a
-                href="#"
-                className="hover:text-[#E87722] transition-colors duration-200"
-              >
+            <li className={`${showMore ? "block" : "hidden"} sm:block`}>
+              <a href="#" className="hover:text-[#E87722] transition-colors duration-200">
                 Affiliation
               </a>
             </li>
+
+            {/* Mobile toggle button */}
             <li className="sm:hidden">
-              <button className="text-[#E87722]">More...</button>
+              {!showMore && (
+                <button
+                  onClick={() => setShowMore(true)}
+                  className="text-[#E87722]"
+                >
+                  More...
+                </button>
+              )}
             </li>
           </ul>
         </div>
 
+        
         <div className="space-y-4">
           <p className="text-lg sm:text-xl font-bold mb-2 sm:mb-4 relative after:block after:w-16 after:h-[2px] after:bg-[#E87722] after:mt-2">
             Administration
           </p>
           <ul className="space-y-2 text-sm text-gray-300">
-            <li>
-              <a
-                href="#"
-                className="hover:text-[#E87722] transition-colors duration-200"
-              >
-                Administration
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-[#E87722] transition-colors duration-200"
-              >
-                President's Desk
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-[#E87722] transition-colors duration-200"
-              >
-                Principal's Message
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-[#E87722] transition-colors duration-200"
-              >
-                Director's Message
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-[#E87722] transition-colors duration-200"
-              >
-                Governing Body
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                className="hover:text-[#E87722] transition-colors duration-200"
-              >
-                Alumni
-              </a>
-            </li>
+            <li><a href="#" className="hover:text-[#E87722] transition-colors duration-200">Administration</a></li>
+            <li><a href="#" className="hover:text-[#E87722] transition-colors duration-200">President's Desk</a></li>
+            <li><a href="#" className="hover:text-[#E87722] transition-colors duration-200">Principal's Message</a></li>
+            <li><a href="#" className="hover:text-[#E87722] transition-colors duration-200">Director's Message</a></li>
+            <li><a href="#" className="hover:text-[#E87722] transition-colors duration-200">Governing Body</a></li>
+            <li><a href="#" className="hover:text-[#E87722] transition-colors duration-200">Alumni</a></li>
           </ul>
         </div>
+
+        
 
         <div className="space-y-4">
           <p className="text-lg sm:text-xl font-bold mb-2 sm:mb-4 relative after:block after:w-16 after:h-[2px] after:bg-[#E87722] after:mt-2">
@@ -146,7 +93,7 @@ const Footer = () => {
                 href="#"
                 className="hover:text-[#E87722] transition-colors duration-200"
               >
-                Civil Engineering
+                Computer Science & Engineering
               </a>
             </li>
             <li>
@@ -154,7 +101,15 @@ const Footer = () => {
                 href="#"
                 className="hover:text-[#E87722] transition-colors duration-200"
               >
-                Computer Science & Engineering
+                Electrical Engineering
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="hover:text-[#E87722] transition-colors duration-200"
+              >
+                Civil Engineering
               </a>
             </li>
             <li>
@@ -170,17 +125,9 @@ const Footer = () => {
                 href="#"
                 className="hover:text-[#E87722] transition-colors duration-200"
               >
-                Electrical Engineering
-              </a>
-            </li>
-            {/* <li>
-              <a
-                href="#"
-                className="hover:text-[#E87722] transition-colors duration-200"
-              >
                 Humanities & Basic Science
               </a>
-            </li> */}
+            </li>
           </ul>
         </div>
 
@@ -285,6 +232,8 @@ const Footer = () => {
             Designed by Simtrak Solutions
           </div>
         </div>
+
+
       </div>
     </footer>
   );
