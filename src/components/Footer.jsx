@@ -73,9 +73,9 @@ const Footer = () => {
           </p>
           <ul className="space-y-2 text-sm text-gray-300">
             <li><a href="#" className="hover:text-[#E87722] transition-colors duration-200">Administration</a></li>
-            <li><a href="#" className="hover:text-[#E87722] transition-colors duration-200">President's Desk</a></li>
-            <li><a href="#" className="hover:text-[#E87722] transition-colors duration-200">Principal's Message</a></li>
-            <li><a href="#" className="hover:text-[#E87722] transition-colors duration-200">Director's Message</a></li>
+            <li><a href="/presidents-desk" className="hover:text-[#E87722] transition-colors duration-200">President's Desk</a></li>
+            <li><a href="/principals-message" className="hover:text-[#E87722] transition-colors duration-200">Principal's Message</a></li>
+            <li><a href="/directors-message" className="hover:text-[#E87722] transition-colors duration-200">Director's Message</a></li>
             <li><a href="#" className="hover:text-[#E87722] transition-colors duration-200">Governing Body</a></li>
             <li><a href="#" className="hover:text-[#E87722] transition-colors duration-200">Alumni</a></li>
           </ul>

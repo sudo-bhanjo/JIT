@@ -36,6 +36,9 @@ import ECE from "./components/GraduatePrograms/ECE.jsx";
 import DownloadProspectus from "./components/Hero/DownloadProspectus.jsx";
 import AdmissionProcess from "./components/AdmissionProcess/AdmissionProcess.jsx";
 import Humanitics_general from "./components/GraduatePrograms/Humanitics_general.jsx";
+import PrincipalsMessage from "./components/PrincipalsMessage/PrincipalsMessage.jsx";
+import DirectorsMessage from "./components/DirectorsMessage/DirectorsMessage.jsx";
+import Faculty from "./components/Faculty/Faculty.jsx";
 
 // main
 const App = () => {
@@ -98,6 +101,8 @@ const App = () => {
         <Route path="/academics/Admission" element={<Admission />}></Route>
         <Route path="/search" element={<SearchResults />} />
         <Route path="/presidents-desk" element={<PresidentsDesk />} />
+        <Route path="/principals-message" element={<PrincipalsMessage />} />
+        <Route path="/directors-message" element={<DirectorsMessage />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/cse" element={<CSE />} />
         <Route path="/eee" element={<EEE />} />
@@ -105,6 +110,8 @@ const App = () => {
         <Route path="/civil" element={<Civil />} />
         <Route path="/ece" element={<ECE />} />
         <Route path="/general" element={<Humanitics_general />} />
+        <Route path="/Faculty" element={<Faculty />} />
+       
       </Routes>
       <GetInTouchButton />
       {/* <Footer /> */}
