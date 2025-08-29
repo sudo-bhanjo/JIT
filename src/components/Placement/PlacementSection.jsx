@@ -56,11 +56,11 @@ const PlacementSection = () => {
   ];
 
   const stats = [
-    { label: "Placement Offers", value: 450 },
+    { label: "Placement Offers", value: 150 },
     { label: "Highest Package", value: 300000, isCurrency: true },
     { label: "Recruiters", value: 20 },
-    { label: "5 LPA by 9+ Companies", value: 5 },
-    { label: "2.5–3 LPA by 200+ Companies", value: 3 },
+    { label: "3 LPA by 9+ Companies", value: 3 },
+    { label: "2 LPA by 200+ Companies", value: 2 },
     { label: "1 LPA by 500+ Companies", value: 1 },
   ];
 
@@ -105,36 +105,6 @@ const PlacementSection = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Stats Block with Dashed Black Internal Dividers */}
-        {/* <div className="grid grid-cols-2 sm:grid-cols-3 w-full">
-  {stats.map((stat, index) => {
-    const isRightCol = (index + 1) % 3 === 0;
-    const isBottomRow = index >= stats.length - 3;
-
-    return (
-      <motion.div
-        key={index}
-        className={`
-          p-6 text-center font-semibold text-[#E87722]
-          border-black border-dashed
-          ${!isRightCol ? 'border-r' : ''}
-          ${!isBottomRow ? 'border-b' : ''}
-        `}
-        initial={{ opacity: 0, scale: 0.9 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ delay: index * 0.1 }}
-      >
-        <div className="text-2xl md:text-3xl font-bold">
-          {stat.isCurrency ? '₹' : ''}
-          <CountUp end={stat.value} duration={2} separator="," />
-          {stat.label.includes('LPA') && ' LPA'}
-        </div>
-        <div className="text-gray-600 text-sm mt-1">{stat.label}</div>
-      </motion.div>
-    );
-  })}
-</div> */}
 
         {/* Slider Block */}
         <motion.div
