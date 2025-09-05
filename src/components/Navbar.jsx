@@ -260,14 +260,14 @@ const Navbar = () => {
                   >
                     Mechanical Engineering
                   </Link>
-
+{/* 
                   <Link
                     to="/general"
                     onClick={() => setDeptOpen(false)}
                     className="block px-4 py-2 text-sm text-gray-700 hover:text-[#E87722] font-bold"
                   >
                     Humanities & Basic Science
-                  </Link>
+                  </Link> */}
 
                 </div>
               )}
